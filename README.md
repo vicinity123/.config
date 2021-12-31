@@ -61,3 +61,15 @@ cd /home/<UNIX-USERNAME>
 ```
 git clone https://github.com/vicinity123/.config.git
 ```
+6. Change directory into the plugins folder
+```
+cd ~/.config/nvim/vim-plug/
+```
+7. Go into the file and install the plugins
+```
+nvim plugins.vim
+(Inside the file)
+:PlugInstall
+:PlugClean
+:PlugUpdate
+```

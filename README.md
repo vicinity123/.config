@@ -6,7 +6,7 @@
 * [Upgrade to WSL2 from WSL with a Linux Distro installed](#upgrade_wsl1_to_wsl2)
 * [Setup of neovim](#nvim_setup)
 * [Setup of the terminal](#terminal_setup)
-
+* [Setup sources](#setup_sources)
 
 
 ### Enable WSL <a name="enable_wsl"></a>
@@ -102,3 +102,6 @@ git --version
 git config --global user.name <GITHUB-USERNAME>
 git config --global user.email <GITHUB-EMAIL>
 ```
+
+### Setup sources <a name="setup_sources"></a>
+* [Fireship WSL setup](https://fireship.io/lessons/windows-10-for-web-dev/)

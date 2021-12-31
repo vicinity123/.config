@@ -4,7 +4,8 @@
 * [Enable WSL - Windows Subsystem for Linux](#enable_wsl)
 * [Install WSL2 - including Linux distro install](#install_wsl2)
 * [Upgrade to WSL2 from WSL with a Linux Distro installed](#upgrade_wsl1_to_wsl2)
-* [Setup of neovim and the terminal](#nvim_terminal_setup)
+* [Setup of neovim](#nvim_setup)
+* [Setup of the terminal](#terminal_setup)
 
 
 
@@ -39,7 +40,7 @@ wsl -l -v
 wsl --set-version <NAME-OF-LINUX-DISTRO> 2 
 ```
 
-### Setup of neovim and the terminal <a name="nvim_terminal_setup"></a>
+### Setup of neovim <a name="nvim_setup"></a>
 For the following, you need to have a Linux Distro - Ubuntu - installed
 
 1. Launch Ubuntu and create a UNIX username and password
@@ -72,4 +73,32 @@ nvim plugins.vim
 :PlugInstall
 :PlugClean
 :PlugUpdate
+```
+
+### Setup of the terminal <a name="terminal_setup"></a>
+#### Zsh theme: RobbyRussell
+```
+sudo apt install zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+sudo apt-get install fonts-powerline
+```
+Modified theme: modified_russell.zsh_theme. Edit the zshrc file for the theme parameter to "modified_russell"
+
+#### Node JS and NVM
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+```
+```
+nvm install --lts
+```
+
+#### Git install & setup
+```
+sudo apt install git
+git --version
+```
+```
+git config --global user.name <GITHUB-USERNAME>
+git config --global user.email <GITHUB-EMAIL>
 ```

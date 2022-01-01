@@ -30,12 +30,12 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 8. Relaunch Ubuntu and follow the instructions on Ubuntu
 
 ### Upgrade to WSL2 from WSL with a linux distro installed <a name="upgrade_wsl1_to_wsl2"></a>
-1. Open Powershell and type the following command
+1. Open Powershell and check the WSL Version
 ```
 wsl -l -v
 ```
 > You should see your linux distro's name and 1 as its version
-2. Type the following command to upgrade to WSL2
+2. Set the version of your Linux distro to 2
 ```
 wsl --set-version <NAME-OF-LINUX-DISTRO> 2 
 ```
@@ -44,12 +44,12 @@ wsl --set-version <NAME-OF-LINUX-DISTRO> 2
 For the following, you need to have a Linux Distro - Ubuntu - installed
 
 1. Launch Ubuntu and create a UNIX username and password
-2. Run the following to update and upgrade Ubuntu
+2. Update and upgrade Ubuntu
 ```
 sudo apt update
 sudo apt upgrade
 ```
-3. To install neovim, run the following
+3. Install neovim with admin rights
 ```
 sudo apt install neovim
 ```
@@ -58,15 +58,20 @@ sudo apt install neovim
 cd
 cd /home/<UNIX-USERNAME>
 ```
-5. Clone this in the home directory
+5. Clone this directory
 ```
 git clone https://github.com/vicinity123/.config.git
 ```
-6. Change directory into the plugins folder
+6. Install [vim plug](https://github.com/junegunn/vim-plug)
+```
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+```
+8. Change directory into the plugins folder
 ```
 cd ~/.config/nvim/vim-plug/
 ```
-7. Go into the file and install the plugins
+8. Go into the file and install the plugins
 ```
 nvim plugins.vim
 (Inside the file)
@@ -74,21 +79,20 @@ nvim plugins.vim
 :PlugClean
 :PlugUpdate
 ```
+9. Install [COC](https://github.com/neoclide/coc.nvim) for different languages
+```
+nvim
+:CocInstall coc-pyright coc-html coc-css coc-tsserver coc-json
+```
+
 
 ### Setup of the terminal <a name="terminal_setup"></a>
-#### Zsh theme: RobbyRussell
-```
-sudo apt install zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-sudo apt-get install fonts-powerline
-```
-Modified theme: modified_russell.zsh_theme. Edit the zshrc file for the theme parameter to "modified_russell"
 
 #### Node JS and NVM
 ```
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 ```
+Close the terminal and relaunch it for NVM to start working
 ```
 nvm install --lts
 ```
@@ -105,3 +109,4 @@ git config --global user.email <GITHUB-EMAIL>
 
 ### Setup sources <a name="setup_sources"></a>
 * [Fireship WSL setup](https://fireship.io/lessons/windows-10-for-web-dev/)
+* [Chris at machine website series](https://www.chrisatmachine.com/Neovim/01-vim-plug/)

@@ -111,6 +111,7 @@ nvm install --lts
 ```
 
 #### Git install & setup
+If git is not installed
 ```
 sudo apt install git
 git --version

@@ -81,10 +81,18 @@ cd ~/.config/nvim/vim-plug/
 nvim plugins.vim
 (Inside the file)
 :PlugInstall
-:PlugClean
 :PlugUpdate
+:PlugClean
 ```
-9. Install [COC](https://github.com/neoclide/coc.nvim) for different languages
+9. Setup COC for neovim
+```
+cd ~/.config/nvim/autoload/plugged/coc.nvim
+npm install -g yarn
+yarn install
+yarn build
+``` 
+ 
+Install [COC](https://github.com/neoclide/coc.nvim) for different languages
 ```
 nvim
 :CocInstall coc-pyright coc-html coc-css coc-tsserver coc-json

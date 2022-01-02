@@ -53,6 +53,11 @@ sudo apt upgrade
 ```
 sudo apt install neovim
 ```
+Install latest unstable version of neovim
+```
+sudo add-apt-repository ppa:neovim-ppa/unstable
+sudo apt-get update $ sudo apt-get install neovim
+```
 4. Run one of the two to return your home directory
 ```
 cd

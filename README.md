@@ -95,7 +95,7 @@ yarn build
 Install [COC](https://github.com/neoclide/coc.nvim) for different languages
 ```
 nvim
-:CocInstall coc-pyright coc-html coc-css coc-tsserver coc-json
+:CocInstall coc-pyright coc-tsserver coc-clangd
 ```
 
 

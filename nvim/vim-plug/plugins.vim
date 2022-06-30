@@ -19,7 +19,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	" Theme
 	Plug 'joshdick/onedark.vim'
 	Plug 'arcticicestudio/nord-vim'
-	Plug 'sonph/onehalf', { 'rtp': 'vim'  }
+	Plug 'fratajczak/one-monokai-vim'
+	" Plug 'sonph/onehalf', { 'rtp': 'vim'  }
 	" Conqueror of complettion - kept up to date with master
 	Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 	" Vim airline and its theme

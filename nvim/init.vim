@@ -5,7 +5,8 @@ source $HOME/.config/nvim/general/settings.vim
 " Import key mappings
 source $HOME/.config/nvim/keys/mappings.vim
 " Import theme
-source $HOME/.config/nvim/themes/onehalf.vim
+" source $HOME/.config/nvim/themes/materialbox.vim
+source $HOME/.config/nvim/themes/onehalfdark.vim
 " Import COC
 source $HOME/.config/nvim/plug-config/coc.vim
 " Import airline themes
